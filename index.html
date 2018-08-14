@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Where's My Child?</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Begin tracking your child's every move.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <p><a href="signup/index.html">Sign Up</a></p>
+            </li>
+            <li class="nav-item">
+              <p><a href="login/index.html">Login</a></p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <style>
+ header{
+  background: greenyellow !important;
+}
+body{
+   background: greenyellow !important; 
+} 
+    </style>
+   </style>
+    <header class="masthead text-center text-black">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">Where's My Child?</h1>
+          <h2 class="masthead-subheading mb-0">Track your kids that don't have phones.</h2>
+          <a href="shopping/index.html"><button type="button">Place Your Order</button></a>
+</script>
+        </div>
+        <iframe width="700" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Pittsburgh&key=AIzaSyDjlbdyG9QJGJFKySq4Q-AXfAHmnLHh_Jc"class="center" allowfullscreen></iframe>
+      </div>
+      <p id="demo">Click the button to get your position.</p>
+
+      <button onclick="getLocation()">Try It</button>
+      
+      <div id="mapholder"></div>
+      
+      <script>
+      var x = document.getElementById("demo");
+      
+      function getLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition, showError);
+          } else {
+              x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+      }
+      
+      function showPosition(position) {
+          var latlon = position.coords.latitude + "," + position.coords.longitude;
+          var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="
+          +latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
+          document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
+      }
+      //To use this code on your website, get a free API key from Google.
+      //Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+      
+      function showError(error) {
+          switch(error.code) {
+              case error.PERMISSION_DENIED:
+                  x.innerHTML = "User denied the request for Geolocation."
+                  break;
+              case error.POSITION_UNAVAILABLE:
+                  x.innerHTML = "Location information is unavailable."
+                  break;
+              case error.TIMEOUT:
+                  x.innerHTML = "The request to get user location timed out."
+                  break;
+              case error.UNKNOWN_ERROR:
+                  x.innerHTML = "An unknown error occurred."
+                  break;
+          }
+      }
+      </script>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/question.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">What does the app do?</h2>
+              <p class = "display-4">This is a app were in can show you were your child is with a wrist band or something that can be placed inside of your child's clothing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/child2.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">How much does it cost a month?</h2>
+              <p class ="display-4">The app cost's $9.99/month if you want the premium you have special features that come with the app, if you want the free version you won't get any special features.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/location2.png" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Is the location accurate?</h2>
+              <p class ="display-4">When you look at the map on the app you will see your child's precise location.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Child Location App 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- Bootstrap core JavaScript -->
+   
+
+  </body>
+
+</html>
