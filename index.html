@@ -85,6 +85,9 @@ function showPosition(position) {
     +latlon+"&zoom=14&size=400x300&key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU";
     document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
 }
+//To use this code on your website, get a free API key from Google.
+//Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+
 function showError(error) {
     switch(error.code) {
         case error.PERMISSION_DENIED:
@@ -102,6 +105,7 @@ function showError(error) {
     }
 }
 </script>
+
       <div class="bg-circle-1 bg-circle"></div>
       <div class="bg-circle-2 bg-circle"></div>
       <div class="bg-circle-3 bg-circle"></div>
