@@ -1,0 +1,158 @@
+<div id="card-success" class="hidden">
+    <i class="fa fa-check"></i>
+    <p></p>
+  </div>
+  <div id="form-errors" class="hidden">
+    <i class="fa fa-exclamation-triangle">
+  </i>
+  </div>
+  <div id="form-container">
+  
+    <div id="card-front">
+      <div id="shadow"></div>
+      <div id="image-container">
+        <span id="amount">paying: <strong>$10</strong></span>
+        <span id="card-image">
+        
+          </span>
+      </div>
+      <end card image container>
+  
+      <label for="card-number">
+          Card Number
+        </label>
+      <input type="text" id="card-number" placeholder="1234 5678 9101 1112" length="16">
+      <div id="cardholder-container">
+        <label for="card-holder">Card Holder
+        </label>
+        <input type="text" id="card-holder" placeholder="e.g. John Doe" />
+      </div>
+      <end card holder container>
+      <div id="exp-container">
+        <label for="card-exp">
+            Expiration
+          </label>
+        <input id="card-month" type="text" placeholder="MM" length="2">
+        <input id="card-year" type="text" placeholder="YY" length="2">
+      </div>
+          <div id="cvc-container">
+        <label for="card-cvc"> CVC/CVV</label>
+        <input id="card-cvc" placeholder="XXX-X" type="text" min-length="3" max-length="4">
+        <p>Last 3 or 4 digits</p>
+      </div>
+      <end CVC container>
+      <end exp container>
+    </div>
+    <end card front>
+    <div id="card-back">
+      <div id="card-stripe">
+      </div>
+  
+    </div>
+    <end card back>
+    <input type="text" id="card-token" />
+    
+  
+  </div>
+  <send form container>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+  <script src="https://use.fontawesome.com/Sf1e0bf0cbc.js"></script>
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {font-family: Arial, Helvetica, sans-serif;}
+  
+  /* The Modal (background) */
+  .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  body{
+   background: greenyellow !important; 
+} 
+  /* Modal Content */
+  .modal-content {
+      background-color: green;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid green;
+      width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  </style>
+  </head>
+  <body>
+  
+  <!-- Trigger/Open The Modal -->
+  <button id="myBtn">Submit</button>
+  
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+  
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Thank you Your Payment has been submitted</p>
+    </div>
+  
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+      modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+      modal.style.display = "none";
+      window.location = "https://www.google.com";
+  
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+  </script>
+  
+  </body>
+  </html>
